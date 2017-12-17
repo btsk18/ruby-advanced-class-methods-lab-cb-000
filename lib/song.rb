@@ -43,7 +43,8 @@ class Song
     @@all.sort_by { |song| song.name.downcase }
   end
 
-  def self.new_from_filename(name)
-    name.split(" - ")[1].chomp(".mp3")
+  def self.new_from_filename(filename)
+    name = filename.split(" - ")[1].chomp(".mp3")
+    create_by_name(name)
   end
 end
