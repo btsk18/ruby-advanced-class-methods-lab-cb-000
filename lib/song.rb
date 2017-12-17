@@ -19,7 +19,7 @@ class Song
     @@all << song
     song
   end
-  
+
   def self.all
     @@all
   end
@@ -32,5 +32,7 @@ class Song
     @@all.select { |song| song.name == name }.first
   end
 
-  def self.find_or_create_by_name
+  def self.find_or_create_by_name(name)
+    find_by_name(name) unless find_by_name(name) == nil 
+  end
 end
