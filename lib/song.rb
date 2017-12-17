@@ -49,4 +49,10 @@ class Song
     song.artist_name = filename.split(" - ")[0]
     song
   end
+
+  def self.create_fron_filename(filename)
+    song = new_from_filename(filename)
+    @@all << song
+    song
+  end
 end
