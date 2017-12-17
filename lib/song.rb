@@ -48,6 +48,5 @@ class Song
     song = new_by_name(name)
     song.artist_name = filename.split(" - ")[0]
     song
-    binding.pry
   end
 end
